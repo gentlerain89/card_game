@@ -1,0 +1,11 @@
+<div id="card_game">
+	<h2>Welcome to memory game!</h2>
+	<h4>Move count: {{moves}}</h4>
+	<h4>Matched pair: {{pairs}}</h4>
+	<div class="inner_container">
+		<a href="javascript:void(0);" ng-repeat="card in positionAndCards" class="card-item" ng-click="flipCard(card);">
+			<div class="card up" style="background-image:url('../img/{{(card.isUp || card.matched) && card.card || 'card_back'}}.png')">
+			</div>
+		</a>
+	</div>
+</div>
